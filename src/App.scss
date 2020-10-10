@@ -1,0 +1,34 @@
+@import "~bootstrap/scss/bootstrap";
+
+html,
+body {
+  font-family: "GT Eesti Pro Display";
+}
+
+.header {
+  &__item {
+    transition: all 0.3s ease-in-out;
+    transition-property: background, opacity;
+    &_active {
+      background: rgba(0, 0, 0, .1);
+    }
+    &:hover,
+    &:focus {
+      border: none;
+      outline: none;
+      background: rgba(0, 0, 0, .1);
+    }
+  }
+  @media (max-width: 576px) {
+    overflow-x: scroll;
+  }
+}
+
+.item {
+  &__img {
+    object-fit: cover;
+    @media (max-width: 576px) {
+      height: 150px;
+    }
+  }
+}
